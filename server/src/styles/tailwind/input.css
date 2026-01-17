@@ -1,0 +1,271 @@
+/* Tailwind CSS v4 Input File */
+@import "tailwindcss";
+
+/* Custom base styles to match Bootstrap look */
+@layer base {
+    body {
+        @apply bg-gray-100 text-gray-900;
+    }
+
+    a {
+        @apply text-blue-600 hover:text-blue-800;
+    }
+
+    table {
+        @apply w-full border-collapse;
+    }
+
+    th,
+    td {
+        @apply border border-gray-300 px-4 py-2;
+    }
+
+    thead {
+        @apply bg-gray-800 text-white;
+    }
+}
+
+/* Bootstrap-like component classes using Tailwind */
+@layer components {
+
+    /* Buttons */
+    .btn {
+        @apply px-4 py-2 rounded font-medium transition-colors duration-200 inline-block text-center cursor-pointer;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+
+    .btn-success {
+        @apply bg-green-600 text-white hover:bg-green-700;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white hover:bg-red-700;
+    }
+
+    .btn-warning {
+        @apply bg-yellow-500 text-white hover:bg-yellow-600;
+    }
+
+    .btn-info {
+        @apply bg-cyan-500 text-white hover:bg-cyan-600;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-600 text-white hover:bg-gray-700;
+    }
+
+    .btn-xs {
+        @apply px-2 py-1 text-xs;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-sm;
+    }
+
+    .btn-lg {
+        @apply px-6 py-3 text-lg;
+    }
+
+    .btn-block {
+        @apply w-full;
+    }
+
+    /* Cards */
+    .card {
+        @apply bg-white rounded-lg shadow-md;
+    }
+
+    .card-header {
+        @apply px-4 py-3 border-b border-gray-200 bg-gray-50 rounded-t-lg;
+    }
+
+    .card-body {
+        @apply p-4;
+    }
+
+    .card-outline-primary {
+        @apply border-2 border-blue-600;
+    }
+
+    /* Container */
+    .container {
+        @apply max-w-7xl mx-auto px-4;
+    }
+
+    /* Grid - Bootstrap-like row/col system */
+    .row {
+        @apply flex flex-wrap -mx-2;
+    }
+
+    .col-md-3 {
+        @apply w-full md:w-1/4 px-2 mb-4;
+    }
+
+    .col-md-4 {
+        @apply w-full md:w-1/3 px-2 mb-4;
+    }
+
+    .col-md-6 {
+        @apply w-full md:w-1/2 px-2 mb-4;
+    }
+
+    .col-md-8 {
+        @apply w-full md:w-2/3 px-2 mb-4;
+    }
+
+    .col-md-12 {
+        @apply w-full px-2 mb-4;
+    }
+
+    .col-lg-4 {
+        @apply w-full lg:w-1/3 px-2 mb-4;
+    }
+
+    .col-lg-8 {
+        @apply w-full lg:w-2/3 px-2 mb-4;
+    }
+
+    .col-sm-12 {
+        @apply w-full sm:w-full px-2 mb-4;
+    }
+
+    .col-xs-12 {
+        @apply w-full px-2 mb-4;
+    }
+
+    /* Forms */
+    .form-control {
+        @apply w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+    }
+
+    .form-group {
+        @apply mb-4;
+    }
+
+    /* Alerts */
+    .alert {
+        @apply p-4 rounded mb-4;
+    }
+
+    .alert-success {
+        @apply bg-green-100 text-green-800 border border-green-300;
+    }
+
+    .alert-danger {
+        @apply bg-red-100 text-red-800 border border-red-300;
+    }
+
+    .alert-warning {
+        @apply bg-yellow-100 text-yellow-800 border border-yellow-300;
+    }
+
+    .alert-info {
+        @apply bg-blue-100 text-blue-800 border border-blue-300;
+    }
+
+    /* Tables */
+    .table {
+        @apply w-full border-collapse;
+    }
+
+    .table-bordered {
+        @apply border border-gray-300;
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+        @apply border border-gray-300;
+    }
+
+    .table-hover tbody tr:hover {
+        @apply bg-gray-100;
+    }
+
+    /* Media object */
+    .media {
+        @apply flex items-start;
+    }
+
+    .media-body {
+        @apply flex-1 ml-4;
+    }
+
+    .media-left {
+        @apply mr-4;
+    }
+
+    /* Text utilities */
+    .text-white {
+        @apply text-white;
+    }
+
+    .text-color {
+        @apply text-gray-700;
+    }
+
+    /* Spacing utilities */
+    .p-30 {
+        @apply p-6;
+    }
+
+    .m-b-0 {
+        @apply mb-0;
+    }
+
+    .m-b-10 {
+        @apply mb-2;
+    }
+
+    /* Font sizes */
+    .f-s-20 {
+        @apply text-xl;
+    }
+
+    .f-s-40 {
+        @apply text-4xl;
+    }
+
+    /* Text alignment */
+    .text-xs-center {
+        @apply text-center;
+    }
+
+    .text-sm-left {
+        @apply sm:text-left;
+    }
+
+    /* Image utilities */
+    .img-fluid {
+        @apply max-w-full h-auto;
+    }
+
+    .img-responsive {
+        @apply max-w-full h-auto;
+    }
+
+    .radius {
+        @apply rounded;
+    }
+
+    /* List utilities */
+    .list-unstyled {
+        @apply list-none p-0 m-0;
+    }
+
+    /* Background */
+    .bg-gray {
+        @apply bg-gray-100;
+    }
+
+    /* Collapse for sidebar */
+    .collapse {
+        @apply hidden;
+    }
+
+    .collapse.show {
+        @apply block;
+    }
+}

@@ -1,0 +1,13 @@
+  }
+} 
+
+// Fix spacing for Auth Pages (Login/Signup) due to fixed navbar
+.signup-container,
+.login-content {
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Align to top (with padding) rather than center to handle height better
+}
+

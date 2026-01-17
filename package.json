@@ -1,0 +1,31 @@
+{
+  "name": "cendash",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CenDash - Campus dining made wonderful",
+  "type": "module",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:vite\" \"pnpm dev:php\" \"pnpm dev:sass\"",
+    "dev:vite": "vite",
+    "dev:php": "dotenv -- php -S localhost:8000 -t .",
+    "dev:sass": "sass --watch server/src/styles/scss:server/src/styles/css",
+    "build": "vite build && pnpm build:sass",
+    "build:sass": "sass --style=compressed server/src/styles/scss:server/src/styles/css",
+    "preview": "vite preview",
+    "start": "vite preview --host 0.0.0.0 --port ${PORT:-3000}"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "dotenv-cli": "^11.0.0",
+    "sass": "^1.97.2",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "scrollreveal": "^4.0.9"
+  }
+}

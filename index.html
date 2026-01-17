@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CenDash | Landing Page</title>
+  <link rel="icon" href="/assets/images/logo.png">
+
+  <!-- Preload CSS to prevent FOUC (Flash of Unstyled Content) -->
+  <!-- Removed SCSS preload to avoid console warning since Vite handles CSS injection -->
+
+  <script type="importmap">
+    {
+      "imports": {
+        "emailjs-com": "https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js",
+        "scrollreveal": "https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"
+      }
+    }
+  </script>
+  <!-- Vite automatically injects CSS during build -->
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/email.js"></script>
+  <script type="module" src="/src/scrollReveal.js"></script>
+</head>
+
+<body class="landing-page">
+  <!-- ======================================================================= -->
+  <!-- Navbar -->
+  <nav class="nav_landing-page top-2">
+    <div class="nav-logo-container">
+      <img class="nav-logo-image" src="/assets/images/logo.png" alt="Logo">
+      <a href="#home">
+        <h1 class="nav-logo-text">
+          <span>C</span>en<span>D</span>ash
+        </h1>
+      </a>
+    </div>
+    <div class="nav-item-container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-mobile">
+      <a href="#about">About</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="burger-container">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  <!-- ======================================================================= -->
+  <!-- Hero Section - Modern Split Screen -->
+  <header class="hero-modern" id="home">
+    <div class="container hero-container">
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Campus Cravings, <span class="gradient-text">Delivered in Minutes</span>
+        </h1>
+        <p class="hero-description">
+          The smartest way to eat on campus. Order from top vendors, track your delivery in real-time, and never miss a
+          meal between classes.
+        </p>
+        <div class="hero-cta">
+          <a href="/server/" class="btn-primary glow">
+            <span>Order Now</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#about" class="btn-secondary">
+            <span>Learn More</span>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number gradient-text">500+</span>
+            <span class="stat-label">Happy Students</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number gradient-text">15+</span>
+            <span class="stat-label">Campus Vendors</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number gradient-text">2k+</span>
+            <span class="stat-label">Orders Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="/assets/images/logo.png" alt="Delicious Food" class="hero-image">
+          <div class="hero-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-indicator">
+      <span></span>
+      <span></span>
+    </a>
+  </header>
+  <!-- ======================================================================= -->
+  <!-- Features Section - Modern Grid -->
+  <section class="features-modern" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose <span class="gradient-text">CenDash?</span></h2>
+        <p class="section-description">
+          We get it - campus life is busy. That's why we built CenDash: to bring you the food you crave, right when you
+          need it. No lines, no hassle, just good eats.
+        </p>
+      </div>
+
+      <!-- Real-Time Tracking Spotlight -->
+      <section class="tracking-showcase glass">
+        <div class="tracking-copy">
+          <p class="tracking-eyebrow">Real-Time Tracking</p>
+          <h3 class="tracking-title">Know where your food is without guessing</h3>
+          <p class="section-description tracking-description">Follow your rider from kitchen to gate with live location
+            and alerts.</p>
+        </div>
+
+        <div class="tracking-visual">
+          <div class="radar-notes">
+            <ul class="tracking-steps">
+              <li>
+                <span class="step-dot"></span>
+                <div>
+                  <p class="step-title">Kitchen to campus map</p>
+                  <p class="step-copy">Watch the path your rider takes and see when they leave the caf so you can time
+                    your walk.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-dot"></span>
+                <div>
+                  <p class="step-title">ETA that adjusts</p>
+                  <p class="step-copy">If a gate line slows them down or it starts raining, we nudge the ETA so you're
+                    not left guessing.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-dot"></span>
+                <div>
+                  <p class="step-title">Heads-up before arrival</p>
+                  <p class="step-copy">Get a ping about a minute out so you can meet them without standing around
+                    outside.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="tracking-badges">
+              <span class="tracking-pill">Live location</span>
+              <span class="tracking-pill">Route changes</span>
+              <span class="tracking-pill">1-min heads-up</span>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <iframe class="map-frame" title="CenDash live dropzone"
+              src="https://maps.google.com/maps?q=UNLAD%20Trade%20Center&output=embed" loading="lazy" allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-footer">
+              <p class="map-label">Live handoff point | Unlad Trade Center</p>
+              <a class="map-link"
+                href="https://www.google.com/maps/place/UNLAD+Trade+Center/data=!4m2!3m1!1s0x0:0xbbec380ba8ec11c1?sa=X&ved=1t:2428&ictx=111"
+                target="_blank" rel="noreferrer">Open map</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Lightning Fast</h3>
+          <p class="feature-description">
+            Hungry? Don't wait. With our one-tap favorites, your go-to meal is ordered in seconds. Ideally, before your
+            next class even starts.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-Time Tracking</h3>
+          <p class="feature-description">
+            Watch your food come to you, live. We'll give you a heads-up when it's arriving, so you're not left guessing
+            (or hungry).
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Multiple Vendors</h3>
+          <p class="feature-description">
+            Pizza, burgers, or tacos? Why choose? Browse all the best campus spots in one app and satisfy whatever
+            craving hits you.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Student Reviews</h3>
+          <p class="feature-description">
+            See what everyone's eating. Check out honest ratings from your friends to find the hidden gems on campus.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card glass">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 10H21M7 15H8M12 15H17M6 19H18C19.1046 19 20 18.1046 20 17V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V17C4 18.1046 4.89543 19 6 19Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Flexible Payments</h3>
+          <p class="feature-description">
+            Cash, card, or campus credits - pay however you want. We keep it flexible so you can focus on the food.
+          </p>
+        </div>
+      </div>
+
+      <div class="reviews-modern" id="reviews">
+        <div class="reviews-top">
+          <div class="reviews-copy">
+            <p class="reviews-eyebrow">Campus Stories</p>
+            <h3 class="reviews-title">Reviews from students and mentors</h3>
+            <p class="section-description reviews-description">Real notes from people who use CenDash to squeeze meals
+              between classes, duty shifts, and campus runs.</p>
+          </div>
+        </div>
+
+        <div class="reviews-rail">
+          <div class="reviews-grid" role="list">
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 4.9 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">4.9</span>
+              </div>
+              <p class="review-text">"Nakaka-catch up pa rin ako sa next lab class kasi consistent ang 15-minute drop
+                offs. Clear rin yung rider updates kaya hindi ako kinakabahan na baka ma-late."</p>
+              <p class="review-date">Updated Oct 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">MS</div>
+                <div>
+                  <p class="reviewer-name">Miguel Santos</p>
+                  <p class="reviewer-role">BSIT Student</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 4.8 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">4.8</span>
+              </div>
+              <p class="review-text">"Gumagana kahit peak hours. Na-track ko agad kung nasaan yung order ko at nakuha ko
+                pa bago mag-start yung psych thesis consult namin."</p>
+              <p class="review-date">Updated Sep 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">AD</div>
+                <div>
+                  <p class="reviewer-name">Ana Dela Cruz</p>
+                  <p class="reviewer-role">3rd Year Psychology</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 5.0 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">5.0</span>
+              </div>
+              <p class="review-text">"Faculty meetings usually overrun. I scheduled a group order sa app, dumating
+                synchronized sa end ng discussion kaya di naputol yung agenda namin."</p>
+              <p class="review-date">Updated Aug 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">LR</div>
+                <div>
+                  <p class="reviewer-name">Prof. Liza Ramos</p>
+                  <p class="reviewer-role">College of Business</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 4.7 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">4.7</span>
+              </div>
+              <p class="review-text">"Malinis yung payment reconciliation sa receipts. Kahit shared order ng mga advisee
+                ko, kita agad kung sino ang nag-settle sa GCash at sa card."</p>
+              <p class="review-date">Updated Jul 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">CV</div>
+                <div>
+                  <p class="reviewer-name">Sir Carlo Villanueva</p>
+                  <p class="reviewer-role">IT Department</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 4.9 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">4.9</span>
+              </div>
+              <p class="review-text">"Sa duty sa clinic, minsan walang time lumabas. Na-drop sa guardhouse mismo, tapos
+                may heads-up bago dumating. Hindi ako nagmamadali mag clock back in."</p>
+              <p class="review-date">Updated Jun 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">JU</div>
+                <div>
+                  <p class="reviewer-name">Janelle Uy</p>
+                  <p class="reviewer-role">Senior Nursing</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 4.8 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">4.8</span>
+              </div>
+              <p class="review-text">"Nagpa-team snack ako after training. Kahit sabay-sabay na orders, dumating nang
+                buo at hindi naligaw sa oval. Solid yung live location."</p>
+              <p class="review-date">Updated May 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">CR</div>
+                <div>
+                  <p class="reviewer-name">Coach Rafi</p>
+                  <p class="reviewer-role">Varsity Coach</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 5.0 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">5.0</span>
+              </div>
+              <p class="review-text">"Library shift ko hanggang gabi. Naka-schedule ko ang order para break time, tapos
+                exact sa doorstep ng lib yung drop. Walang abala sa readers."</p>
+              <p class="review-date">Updated Apr 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">MI</div>
+                <div>
+                  <p class="reviewer-name">Mae Ignacio</p>
+                  <p class="reviewer-role">Library Staff</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card glass">
+              <div class="review-rating" aria-label="Rated 4.7 out of 5">
+                <div class="review-stars">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l2.7 6.4 6.8.5-5.2 4.5 1.6 6.7L12 16.7 6.1 20 7.7 13.3 2.5 9l6.8-.6L12 2z" />
+                  </svg>
+                </div>
+                <span class="review-score">4.7</span>
+              </div>
+              <p class="review-text">"Freshie pa lang ako, pero hindi na ako naliligaw sa pick-up spots dahil may labels
+                sa map. Dumadating din sa dorm gate—no need magmadali."</p>
+              <p class="review-date">Updated Mar 2025</p>
+              <div class="reviewer">
+                <div class="reviewer-avatar">KT</div>
+                <div>
+                  <p class="reviewer-name">Kian Torres</p>
+                  <p class="reviewer-role">1st Year Engineering</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="reviews-controls" aria-label="Review navigation">
+            <button class="reviews-nav reviews-prev" aria-label="Previous review">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15.5 5.5 9 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="reviews-nav reviews-next" aria-label="Next review">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.5 5.5 15 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="payments" id="payments">
+    <div class="container payments-shell">
+      <div class="payments-copy">
+        <p class="payments-eyebrow">Secure Campus Payments</p>
+        <h3>Pay your way with trusted Philippine wallets & banks</h3>
+        <p class="section-description">Cash, card, or campus credits—pay however you want. All transactions are
+          encrypted and secure. No extra setup, just tap and checkout.</p>
+      </div>
+
+      <div class="payments-marquee" aria-label="Supported payment methods">
+        <div class="payment-track" aria-hidden="true">
+          <span class="payment-pill"><img src="/assets/images/payments/gcash.svg" alt="GCash"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/maya.svg" alt="Maya"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/qr-ph.svg" alt="QR Ph"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/grabpay.svg" alt="GrabPay"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/shopeepay.svg" alt="ShopeePay"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/bpi.svg" alt="BPI Online"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/bdo-pay.svg" alt="BDO Pay"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/rcbc.svg" alt="RCBC"></span>
+        </div>
+        <div class="payment-track" aria-hidden="true">
+          <span class="payment-pill"><img src="/assets/images/payments/gcash.svg" alt="GCash"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/maya.svg" alt="Maya"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/qr-ph.svg" alt="QR Ph"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/grabpay.svg" alt="GrabPay"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/shopeepay.svg" alt="ShopeePay"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/bpi.svg" alt="BPI Online"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/bdo-pay.svg" alt="BDO Pay"></span>
+          <span class="payment-pill"><img src="/assets/images/payments/rcbc.svg" alt="RCBC"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="final-cta" id="contact">
+    <div class="container final-cta-container">
+      <div class="final-cta-content">
+        <h2>Hungry Yet?</h2>
+        <p>Join 500+ students who never miss a meal. Order now and get your food delivered between classes.</p>
+        <div class="final-cta-buttons">
+          <a href="/server/" class="btn-primary glow">
+            <span>Start Ordering</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="/server/signup.php" class="btn-secondary">
+            <span>Create Account</span>
+          </a>
+        </div>
+        <p class="final-cta-note">No credit card required • Free to join • Cancel anytime</p>
+      </div>
+
+      <div class="final-cta-visual">
+        <div class="radar-grid">
+          <span class="radar-ring ring-1"></span>
+          <span class="radar-ring ring-2"></span>
+          <span class="radar-ring ring-3"></span>
+          <span class="radar-pulse"></span>
+          <span class="radar-dot dot-a">Main Gate</span>
+          <span class="radar-dot dot-b">Cafe</span>
+          <span class="radar-dot dot-c">Unlad Drop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact" id="get-in-touch">
+    <img src="/assets/images/contact/contact.png" alt="Contact" srcset="">
+    <div class="contact-content">
+      <h1>Get in Touch</h1>
+      <p>Have a question or suggestion? We're all ears! Reach out to us.</p>
+      <form id="emailForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="3" required></textarea>
+        <button type="submit" id="sendEmailButton">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-column footer-brand">
+          <div class="footer-logo">
+            <img src="/assets/images/logo.png" alt="CenDash Logo" class="footer-logo-image">
+            <h3><span>C</span>en<span>D</span>ash</h3>
+          </div>
+          <p class="footer-tagline">The smartest way to eat on campus. Fast, fresh, and delivered to your gate.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="/server/">Browse Menu</a></li>
+            <li><a href="/server/vendors.php">Our Vendors</a></li>
+          </ul>
+        </div>
+
+        <!-- Account -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Account</h4>
+          <ul class="footer-links">
+            <li><a href="/server/login.php">Sign In</a></li>
+            <li><a href="/server/signup.php">Create Account</a></li>
+            <li><a href="/server/profile.php">My Orders</a></li>
+            <li><a href="/server/profile.php">Profile Settings</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Become a Vendor</a></li>
+            <li><a href="#">Partner With Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 CenDash. All rights reserved.</p>
+        <p class="footer-made">Made with <span class="heart">❤</span> for campus students</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- Scripts removed and moved to head with Import Map -->
+</body>
+
+</html>
