@@ -1,44 +1,40 @@
-# CenDash — Centralized Campus Dining Platform
+# CenDash — Campus Dining Made Simple
 
-CenDash is a high-performance food ordering platform designed to streamline dining logistics at New Era University. By providing a real-time digital menu and a direct ordering interface, the system eliminates manual queuing and optimizes the interaction between students and campus vendors.
+CenDash is a food ordering system built for New Era University. It replaces long, manual queues with a digital menu and a direct ordering interface, making it faster for students to get food and easier for vendors to manage their shops.
 
-## 🚀 Engineering Highlights
+## How it's Built
 
-Built with a focus on core web fundamentals and modern infrastructure, CenDash demonstrates a sophisticated approach to full-stack development without the overhead of heavy frameworks.
+I built CenDash with a focus on core web tech. Most student projects use basic local setups, but I wanted something that felt like a real product.
 
-*   **Architecture:** Engineered from the ground up using **PHP 8.3** and **Vanilla JavaScript**, adopting a "no-framework" philosophy to maintain a lightweight footprint and ensure absolute control over the system logic.
-*   **Infrastructure & DevOps:** Containerized the entire application using **Docker** to ensure environment parity. Configured a modern development pipeline using **Vite** and **pnpm** for optimized asset delivery and dependency management.
-*   **Data Persistence:** Integrated **Supabase (PostgreSQL)** for secure, cloud-based data handling, utilizing PDO with prepared statements to ensure top-tier security and performance.
-*   **Leadership:** Led a team of four developers, overseeing the entire software development lifecycle (SDLC) from initial UI/UX wireframing in SCSS to backend implementation and database schema design.
-
----
-
-## 🛠 Tech Stack
-
-### Backend & Database
-*   **PHP 8.3**: Robust server-side logic and API handling.
-*   **Supabase / PostgreSQL**: Scalable relational database with cloud persistence.
-*   **EmailJS**: Integrated for automated notification services.
-
-### Frontend
-*   **Vanilla JS (ES6+)**: High-performance client-side logic.
-*   **Tailwind CSS v4 & SCSS**: A custom-built, responsive design system.
-*   **Vite**: Next-generation frontend tooling for rapid development and production builds.
-*   **ScrollReveal**: Subtle micro-animations for an enhanced user experience.
-
-### Deployment & Tools
-*   **Docker**: Containerization for consistent deployment.
-*   **Render**: Automated CI/CD platform for production hosting.
-*   **pnpm**: High-efficiency package management.
+*   **Custom Framework-free Build:** Built entirely from scratch using **PHP 8.3** and **Vanilla JavaScript**. No heavy frameworks—just clean code that stays fast and easy to maintain.
+*   **Modern Infrastructure:** The app is containerized with **Docker**, so it runs the same way on my machine as it does on the server. I used **Vite** and **pnpm** to keep the frontend build process fast.
+*   **Database:** Instead of basic text files or local MySQL, I used **Supabase (PostgreSQL)**. It handles our data securely and gives us a cloud-hosted backend that's ready for production.
+*   **The Team:** I led a team of four, handling everything from the initial UI designs in SCSS to the database schema and deployment on Render.
 
 ---
 
-## 🌟 Key Features
+## The Tech Stack
 
-*   **Real-time Menu Management**: Dynamic vendor storefronts with instant price and availability updates.
-*   **Vendor Dashboard**: Comprehensive order management system for campus vendors to track and process transactions.
-*   **Student Interface**: Streamlined checkout process with personal order history tracking.
-*   **Multi-tenant Architecture**: Scalable design allowing multiple vendors to manage independent categories and inventory.
+### Tools
+*   **PHP 8.3**: Handles all the logic and database connections.
+*   **Supabase / PostgreSQL**: Cloud database with high security.
+*   **Vite**: Fast dev server and build tool.
+*   **Docker**: For consistent environments across different machines.
+*   **Tailwind CSS v4 & SCSS**: For the layout and custom styling.
+
+### Extras
+*   **EmailJS**: For sending order notifications.
+*   **ScrollReveal**: To add some simple animations when scrolling.
+*   **pnpm**: Because it's faster and uses less disk space than npm.
+
+---
+
+## What it Does
+
+*   **Live Menus:** Vendors can update their food items, prices, and availability in real-time.
+*   **Vendor Dashboard:** A dedicated area for shop owners to track sales and manage incoming orders.
+*   **Student Orders:** A clean interface for students to browse, order, and see their history.
+*   **Multi-vendor Support:** Designed so multiple vendors can manage their own separate inventory and categories.
 
 ---
 
@@ -69,9 +65,9 @@ Built with a focus on core web fundamentals and modern infrastructure, CenDash d
 
 ---
 
-## 📈 Context & Achievement
+## Why this exists
 
-CenDash was developed as a production-ready solution to solve real-world dining inefficiencies at New Era University. The project was highly recognized for its technical architecture, leading to successful implementation and helping bridge the gap between campus vendors and the student population.
+We built CenDash because ordering food on campus was a hassle. The lines were too long, and it was hard to know what was actually available until you got to the counter. This project was our way of fixing that problem with a real technical solution. It was highly rated for its architecture and is a solid example of how to build a production-ready app without the bloat of large frameworks.
 
 ---
 
