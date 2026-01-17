@@ -1,4 +1,8 @@
-# CenDash — Campus Dining Made Simple
+<div align="center">
+  <img src="public/assets/images/logo.png" width="150" alt="CenDash Logo">
+  <h1>CenDash</h1>
+</div>
+
 
 CenDash is a food ordering system built for New Era University. It replaces long, manual queues with a digital menu and a direct ordering interface, making it faster for students to get food and easier for vendors to manage their shops.
 
