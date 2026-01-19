@@ -6,6 +6,13 @@
   z-index: 999999;
   transition: all 0.3s ease;
 
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &.loaded {
     display: none;
 
@@ -27,6 +34,14 @@
     color: var(--text-primary); // White text
     opacity: 0.9;
     animation: pulse 2.5s linear infinite;
+
+    @media (max-width: 768px) {
+      top: auto;
+      width: auto;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      order: 2;
+    }
   }
 
   .cooking {
@@ -37,6 +52,18 @@
     width: 50vh;
     height: 50vh;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: translateX(-15%); // Visual centering correction
+      width: 280px;
+      height: 280px;
+      margin-bottom: -3rem; // Pull text closer
+      margin-top: -4rem; // Lift visually to center
+      order: 1;
+    }
 
     .bubble {
       position: absolute;

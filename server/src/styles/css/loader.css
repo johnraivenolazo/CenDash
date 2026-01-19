@@ -6,6 +6,14 @@
   z-index: 999999;
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  .loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .loader.loaded {
   display: none;
 }
@@ -26,6 +34,15 @@
   opacity: 0.9;
   animation: pulse 2.5s linear infinite;
 }
+@media (max-width: 768px) {
+  .loader .loader-title {
+    top: auto;
+    width: auto;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    order: 2;
+  }
+}
 .loader .cooking {
   position: relative;
   left: 45%;
@@ -34,6 +51,19 @@
   width: 50vh;
   height: 50vh;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .loader .cooking {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: translateX(-15%);
+    width: 280px;
+    height: 280px;
+    margin-bottom: -3rem;
+    margin-top: -4rem;
+    order: 1;
+  }
 }
 .loader .cooking .bubble {
   position: absolute;

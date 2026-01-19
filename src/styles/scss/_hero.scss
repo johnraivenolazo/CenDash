@@ -40,6 +40,13 @@
 // Left: Content
 .hero-content {
     animation: fadeInUp 0.8s ease;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .hero-badge {
@@ -91,7 +98,9 @@
     margin-bottom: var(--space-4);
 
     @media (max-width: 640px) {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
         gap: var(--space-2);
         margin-bottom: var(--space-3);
     }
@@ -123,8 +132,8 @@
 
     @media (max-width: 640px) {
         justify-content: center;
-        width: 100%;
-        padding: 0.7rem 1rem;
+        width: auto;
+        padding: 0.7rem 1.25rem;
     }
 }
 
@@ -196,12 +205,17 @@
 // Right: Visual
 .hero-visual {
     position: relative;
-    animation: fadeInRight 0.8s ease 0.2s backwards;
+    // Removed conflicting CSS animation (handled by ScrollReveal)
+    // animation: fadeInRight 0.8s ease 0.2s backwards;
 
     @media (max-width: 768px) {
         order: -1;
         max-width: 400px;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
 
