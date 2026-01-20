@@ -248,15 +248,20 @@ SELECT setval('vendor_users_vu_id_seq', (SELECT COALESCE(MAX(vu_id), 0) + 1 FROM
 -- Enable these after you've set up Supabase Auth
 -- ============================================================================
 
--- Enable RLS on all tables (uncomment when ready)
--- ALTER TABLE admin ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE users ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE vendor ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE vendor_group ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE vendor_users ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE foods ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE users_orders ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE remark ENABLE ROW LEVEL SECURITY;
+-- Enable RLS on all tables
+ALTER TABLE admin ENABLE ROW LEVEL SECURITY;
+ALTER TABLE users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE vendor ENABLE ROW LEVEL SECURITY;
+ALTER TABLE vendor_group ENABLE ROW LEVEL SECURITY;
+ALTER TABLE vendor_users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE foods ENABLE ROW LEVEL SECURITY;
+ALTER TABLE users_orders ENABLE ROW LEVEL SECURITY;
+ALTER TABLE remark ENABLE ROW LEVEL SECURITY;
+
+-- Revoke access to sensitive tables from API roles
+REVOKE ALL ON TABLE admin FROM anon, authenticated;
+REVOKE ALL ON TABLE users FROM anon, authenticated;
+REVOKE ALL ON TABLE vendor_users FROM anon, authenticated;
 
 -- Example RLS policies (uncomment and customize as needed)
 -- Allow anyone to read foods (menu items)
